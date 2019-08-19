@@ -1,0 +1,380 @@
+// WIdescreens
+@include mediaXl {
+  #info2 {
+    visibility: hidden;
+  }
+  .about-info .job .overlay .library img {
+    width: 20%;
+    margin: 2px;
+    left: 10rem;
+  }
+
+  .about-info .job .backend img {
+    width: 11vw;
+    display: block;
+    position: relative;
+    left: 7rem;
+  }
+
+  .about-info .job .tools img {
+    display: inline-block;
+    width: 6vw;
+    margin: 10px;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+     
+    & .project-details p:hover {
+      padding: 3rem;
+      font-size: 1.3rem;
+      font-family: "Gochi Hand", cursive;
+
+  
+    }
+  }
+}
+
+//DEsktops/laps
+@include mediaLg {
+  /* home */
+  #info2 {
+    visibility: hidden;
+  }
+
+  /* about */
+  .about-info {
+    grid-gap: 1.4rem;
+    padding: 1rem;
+  }
+  
+  .bio-image {
+    width: 100%;
+    height: auto;
+  }
+   .job ul li {
+     font-size: 1.3rem;
+   }
+  .parallax {
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  #my-background {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+  
+
+  /* works */
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .asp .req .req-header {
+    font-size: 1.4rem;
+  }
+}
+
+//Tablets
+@include mediaMd {
+  /* homepage */
+  #logo {
+    margin-bottom: 10rem;
+  }
+
+  #info {
+    visibility: hidden;
+  }
+
+  #info2 {
+    font-size: 7rem;
+  }
+  
+  #home {
+    height: 100%;
+  }
+
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 9vw;
+    }
+    
+    .home-wrap {
+      width: 100%;
+      margin-top: 2rem;
+      font-size: 2vw;
+    }
+    .icons .icon {
+      margin-right: 3px;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    font-size: 1rem;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0);
+
+    .nav-link {
+      font-size: 2.9rem;
+    }
+  }
+
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+
+  /*about */
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
+
+  #genesis {
+    margin-top: 80px;
+  }
+
+  .about-info .job .overlay .library img {
+    width: 13%;
+    margin: 2px;
+    left: 16rem;
+  }
+
+  .about-info .job .tools img {
+    width: 11vw;
+  }
+
+  .parallax {
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
+  /* works */
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #work .asp {
+    display: block;
+    padding: 3rem;
+  }
+
+  /* contact */
+  #contact {
+    grid-template-columns: 1fr;
+  }
+  #contact .contact-form {
+    width: 450px;
+  }
+  .boxes li{
+    font-size: 1.4rem;
+  }
+  
+}
+
+// Smartphones and small devices
+@include mediaSm {
+  /* homepage */
+
+  .nav-item .nav-link {    // addd
+    font-size: 2.3rem;
+  }
+
+  #home {
+    height: 100%;
+  }
+
+  #info {
+    visibility: hidden;
+  }
+
+  #info2 {
+    visibility: visible;
+    font-size: 6rem;
+  }
+
+  .home-wrap {
+    display: inline;
+  }
+
+  #logo {
+    margin: 2rem 0;
+  }
+  #home-text {
+    text-align: left;
+    letter-spacing: 1px;
+    margin-top: 100px;
+    font-size: 3.2rem;
+  }
+  #home-text2 {
+    font-size: 3vw;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0;
+  }
+
+  main .icons .icon {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 7px;
+  }
+
+  /* about page */
+  #about {
+    padding: 1rem;
+  }
+  #about h1 {
+    font-size: 5rem;
+  }
+
+   .about-info .bio-image {
+     width: 100%;
+     height: auto;
+   }
+  
+  .bio #my-background {
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    & .dev-lang {
+      font-size: 1rem;
+    }
+  }
+  .about-info .job {
+    margin-bottom: 0.2rem;
+
+    & .dev-main {
+      font-size: 1.6rem;
+      padding-bottom: 0.4rem;
+    }
+    & ul {
+      font-size: 1.2rem;   // change or unchnange
+    }
+    & .dev-sub {
+      font-size: 0.7rem;
+      padding: 0.3rem;
+    }
+  }
+
+  .about-info .job .overlay .library img {
+    left: 8rem;
+  }
+  .parallax {
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
+  & #about .journey {
+    margin-bottom: 2px;
+
+    & .timeline {
+      padding: 0.2rem;
+      font-size: 1rem;
+      width: 200px;   // add
+
+      & p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  /* Work page */
+  #work .lg-heading {
+    font-size: 5rem;
+  }
+
+  #gh-hint {
+    font-size: .9rem;
+  }
+
+  .section-gh .github-account {
+    margin-top: 20px;
+  }
+
+  #work .asp {  
+    display: block;
+    padding: .5rem;
+
+    & .req {
+      margin: 0;
+      padding: 0;
+
+      & .req-header {
+        font-size: 1.2rem;
+      }
+    }
+
+    & p {
+      text-align: left;
+      padding: 15px;
+    }
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  /* contact page */
+  #contact {
+    grid-template-columns: 1fr;
+
+    & .lg-heading {
+      font-size: 5rem;
+    }
+  }
+  #contact .contact-form {
+    width: 100%;
+    padding: .8rem .6rem;
+
+      & .form-control {
+        height: 2.8rem;
+        font-size: 10px;
+      }
+  }
+
+  .boxes {
+    margin-bottom: 2rem;   // add
+  }
+  .boxes ul li{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    float: unset;    // change
+  }
+  .contact-title h2 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  /* footer */
+  .footer-profile ul li {
+    font-size: .6rem;                    // addd
+  }
+}
