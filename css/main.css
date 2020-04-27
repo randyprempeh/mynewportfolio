@@ -57,22 +57,22 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #212121;
+    background: black;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: black;
+    background: gainsboro;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 20rem;
-      height: 20rem;
-      background: url("../img/rann.jpg");
+      width: 30rem;
+      height: 30rem;
+      background: url("../img/head1.png");
       background-size: cover;
       border-radius: 50%;
       bottom: solid 0.3rem #00b1a7; }
@@ -90,8 +90,8 @@
   .menu .menu-nav .nav-item > .nav-link::before {
     content: "";
     position: absolute;
-    width: 50%;
-    height: 5px;
+    width: 15%;
+    height: 2px;
     bottom: 0;
     top: 0;
     left: 0;
@@ -149,13 +149,11 @@ h1,
 h2,
 h3 {
   margin: 0;
-  /*  color: #fff; */
   letter-spacing: 5px; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6vw;
-    margin-top: 20vh; }
+    font-size: 14vw; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -186,14 +184,9 @@ header {
   padding: 0; }
 
 main {
-  padding: 4rem;
   min-height: calc(100vh - 4rem);
-  overflow: hidden;
-  /* video css / sVG */
   /* keyframes */ }
   main #bg {
-    height: 75vh;
-    width: 100%;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -212,105 +205,7 @@ main {
   main .home-intro {
     height: 100%;
     width: 100%;
-    margin: 0 auto;
-    /*  padding: 3rem; */
-    /*  #text-ready {
-      width: 100%;
-      margin-top: 5rem;
-      animation: fill 0.5s ease fowards 3.5s;
-      opacity: 0.5;
-    }
-
-    #text-ready path:nth-child(1) {
-      stroke-dasharray: 148;
-      stroke-dashoffset: 148;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(2) {
-      stroke-dasharray: 257;
-      stroke-dashoffset: 257;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(3) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(4) {
-      stroke-dasharray: 46;
-      stroke-dashoffset: 46;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(5) {
-      stroke-dasharray: 209;
-      stroke-dashoffset: 209;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(6) {
-      stroke-dasharray: 346;
-      stroke-dashoffset: 346;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(7) {
-      stroke-dasharray: 257;
-      stroke-dashoffset: 257;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(8) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(9) {
-      stroke-dasharray: 209;
-      stroke-dashoffset: 209;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(10) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(11) {
-      stroke-dasharray: 253;
-      stroke-dashoffset: 253;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(12) {
-      stroke-dasharray: 123;
-      stroke-dashoffset: 123;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(13) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(14) {
-      stroke-dasharray: 257;
-      stroke-dashoffset: 257;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(15) {
-        stroke-dasharray: 280;
-        stroke-dashoffset: 280;
-        animation: ready-path 4s ease forwards;
-    }
-
-    @keyframes ready-path {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-  
-      @keyframes fill {
-        from {
-          background: #a3defa;
-        }
-        to {
-          background: #df3adf;
-        }
-      } */ }
+    margin: 0 auto; }
     main .home-intro #logo {
       width: 100%;
       position: absolute;
@@ -352,7 +247,6 @@ main {
   to {
     stroke-dashoffset: 0;
     stroke-dasharray: 0;
-    /*  stroke: #111;  */
     opacity: 0; } }
 
 @keyframes fill {
@@ -364,15 +258,15 @@ main {
     width: 50%;
     margin: 0 auto;
     position: relative;
-    /* left: 10%; */
     margin-bottom: 1rem; }
   main #home-text2 {
-    color: #000;
+    color: #00b1a7;
     margin-bottom: 0.4rem; }
   main .icons {
     margin-top: 0.5rem;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 20px; }
     main .icons::before {
       content: "";
       display: inline-block;
@@ -455,63 +349,51 @@ main {
 
 /* about scss */
 #about-body {
-  background: #160c0d; }
+  background: #fff; }
+
+#about {
+  padding: 4rem; }
+
+.parallax {
+  background-image: url("../img/randy4v.png");
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 #my-background {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 2;
-  letter-spacing: 5px; }
+  letter-spacing: 1px; }
   #my-background #fed {
     color: #54aa34; }
   #my-background #bed {
     color: #df3adf; }
   #my-background .dev-lang {
-    color: lightgray;
+    color: black;
     text-shadow: #fff;
-    font-weight: 100;
+    font-weight: 900;
     letter-spacing: 5px; }
 
-#about .lg-heading {
-  margin-top: 50px; }
-
-.textify {
-  color: #00b1a7;
-  font-size: 8vw;
-  font-style: italic;
-  font-family: "Gochi Hand", cursive;
-  transition: all 0.5s ease-in-out;
-  padding: 1rem; }
-
 #about-txt {
-  font-size: 4.3rem;
+  font-size: 6rem;
   font-weight: 700;
   margin-left: -20px;
   letter-spacing: -2px; }
 
 .about-info {
-  background: rgba(0, 0, 0, 0.3);
   padding: 2rem;
   display: grid;
   grid-gap: 3rem;
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    transition: filter 0.5s ease-in-out;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    margin-top: 20px; }
-    .about-info .bio-image:hover {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-      opacity: 1.6; }
+    grid-area: bioimage; }
   .about-info .bio {
     grid-area: bio;
-    /* font-size: 1.5rem; */ }
-  .about-info #bio-header {
-    font-size: 10vw; }
+    color: dimgrey; }
   .about-info #skill-txt {
     font-size: 8vw; }
   .about-info .job-1 {
@@ -535,11 +417,11 @@ main {
     margin-bottom: 9.5rem;
     position: relative;
     width: 100%;
-    /*  max-width: 400px; */ }
+    color: dimgray; }
     .about-info .job .dev-main {
       font-size: 2.5rem;
       text-align: center;
-      border-bottom: 2px solid gray;
+      border-bottom: 1px solid #bdb8a9;
       padding-bottom: 1rem; }
     .about-info .job .dev-sub {
       text-align: center;
@@ -557,7 +439,7 @@ main {
       font-size: 1.9rem;
       text-transform: uppercase; }
     .about-info .job li {
-      color: silver;
+      color: black;
       opacity: 0.9;
       letter-spacing: 4px; }
     .about-info .job .overlay {
@@ -597,60 +479,50 @@ main {
       width: 7vw;
       margin: 10px; }
 
-.parallax {
-  background-image: url("../img/randy4.jpg");
-  background-attachment: fixed;
-  height: 400px;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
 .journey {
   padding: 10rem;
   width: 50vw;
   margin: 40px auto;
   padding: 10px 20px 10px 20px;
-  border-left: 4px solid #00b1a7; }
+  border-left: 2px solid #00b1a7; }
   .journey span {
-    font-family: "Gochi Hand", cursive;
+    font-family: sans-serif fantasy;
     color: #00b1a7; }
     .journey span:hover {
       transition: all 0.5s ease-out;
-      opacity: 0.4;
-      color: greenyellow; }
+      opacity: 0.8;
+      color: black; }
   .journey .timeline::before {
     content: "";
     display: block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #54aa34;
-    border: 2px solid #000;
+    background-color: #000;
+    border: 2px solid #f5f3ed;
     position: absolute;
     top: 7px;
     left: -29px; }
   .journey .timeline {
-    background-color: #212121;
+    background-color: peachpuff;
     padding: 0.8rem;
     margin-bottom: 1.6rem;
-    font-size: 1.4rem;
     border: 2px solid transparent;
     line-height: 1;
     letter-spacing: 1px;
     position: relative;
-    color: gray;
+    color: black;
     border-radius: 9px;
-    box-shadow: 0px 1px 2px 3px #313131; }
+    box-shadow: 0px 9px 14px 5px #313131; }
     .journey .timeline p {
-      font-family: open sans-serif;
-      font-style: italic;
+      font-family: sans-serif;
       font-weight: 400;
-      font-size: 1.2rem; }
+      font-size: 11px; }
     .journey .timeline button {
       width: 150px;
       border: none;
       border-radius: 10px;
-      background: transparent;
+      background: black;
       overflow: hidden;
       padding: 0.7rem 0.25rem;
       box-shadow: 2px 1px 5px #000; }
@@ -662,26 +534,26 @@ main {
         .journey .timeline button span strong {
           flex: 1 0 50%;
           color: white;
-          font-size: 18px;
-          /*  font-family: "Teko", sans-serif; */ }
+          font-size: 11px; }
         .journey .timeline button span:hover {
           transform: translateX(-50%); }
     .journey .timeline #resume:hover {
-      background: rgba(0, 0, 0, 0.6); }
+      background: transparent; }
   .journey .timeline::after {
     content: "";
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 8px;
-    border-color: transparent #ff0 transparent transparent;
+    border-color: transparent #000 transparent transparent;
     position: absolute;
     top: 7px;
     left: -17px; }
 
 .journey .timeline:hover {
   transition: all 0.5s ease-out;
-  color: white; }
+  color: black;
+  font-weight: 900; }
 
 #para {
   text-align: center;
@@ -697,27 +569,93 @@ main {
   clear: both;
   margin-bottom: 2rem;
   transition: opacity 2s ease;
-  /*  @include easeOut; */
   opacity: 1; }
 
 .hidden {
   opacity: 0; }
 
 /* Portfolio / Works */
+#wrapper-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #1a1a1a;
+  background: rgba(0, 0, 0, 0.2); }
+
+#wrapper-header:before {
+  animation: no-transform 3s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  transform: translateY(-6rem);
+  content: "";
+  background: url("../img/brand.jpg") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1; }
+
+@keyframes no-transform {
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+.animate-pop-up {
+  animation: no-transform 0.6s cubic-bezier(0, 0.69, 0.3, 1.14) forwards;
+  opacity: 0;
+  transform: translateY(-2rem) scale(0.8); }
+
+.header-down-arrow {
+  animation: pulse 2s 3s ease-out infinite;
+  position: absolute;
+  left: 0;
+  bottom: 8vh;
+  text-align: center;
+  right: 0;
+  z-index: 10; }
+
+.header-down-arrow img {
+  animation: no-transform 1s 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(4rem); }
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none; }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+.parallax2 {
+  background-image: url("../img/do.jpg");
+  background-attachment: fixed;
+  height: 400px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
 #work .lg-heading {
   margin-top: 50px;
-  color: dimgrey; }
+  color: dimgrey;
+  text-align: center; }
 
 #work .sm-heading {
-  color: lightgray; }
+  font-size: 20px;
+  letter-spacing: 15px; }
 
 #work-text {
-  font-size: 4.3rem;
+  font-size: 6rem;
   font-weight: 700;
   margin-left: -20px;
   letter-spacing: -2px; }
 
 .projects {
+  padding: 2rem;
   position: relative;
   display: grid;
   grid-gap: 0.7rem;
@@ -830,32 +768,54 @@ main {
       transition: all 0.5s ease-out;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .asp .req .req-header {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: burlywood; }
       .asp .req .req-header .nbr {
         color: #cecece;
         font-family: serif;
-        /*         background: lightgrey; */
         padding: 2px; }
     .asp .req .req-motive {
-      font-size: 20px;
+      font-size: 15px;
       width: 100%;
       height: auto; }
     .asp .req:hover {
-      background: #000;
+      background: rgba(0, 0, 0, 0.8);
       transition: all 0.5s ease-out;
       color: white;
-      border-radius: 10px; }
+      border-radius: 10px;
+      cursor: pointer; }
 
-/* Contact */
-#contact .lg-heading {
-  margin-top: 50px; }
+/* Contact section with wallpaper */
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 1700px;
+  background: url("../img/bb.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
-#contact .sm-heading {
-  font-size: 5vw;
-  color: lightgray;
-  opacity: 0.2;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+#contact-intro {
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  left: 30%;
+  top: 30%;
+  color: dimgrey; }
+  #contact-intro .lg-heading {
+    font-size: 14vw;
+    letter-spacing: 15px;
+    margin: 0; }
+    #contact-intro .lg-heading #contact-text {
+      font-size: 6rem;
+      font-weight: 700;
+      margin-left: -20px;
+      letter-spacing: -2px; }
+  #contact-intro .sm-heading {
+    font-size: 20px;
+    letter-spacing: 15px;
+    margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
 
 .personal-infobox {
   animation: FadeIn 5s;
@@ -867,20 +827,14 @@ main {
   to {
     opacity: 0; } }
 
-#contact-text {
-  font-size: 4.3rem;
-  font-weight: 700;
-  margin-left: -20px;
-  letter-spacing: -2px; }
-
 .boxes {
   width: 50vw;
-  margin-right: 2rem; }
+  margin: 2rem auto; }
   .boxes ul {
     list-style: none;
     display: inline; }
   .boxes li {
-    font-size: 2.3rem;
+    font-size: 15px;
     text-align: center;
     border-left: 3px solid #fff;
     background: rgba(0, 0, 0, 0.4);
@@ -888,8 +842,8 @@ main {
     background-size: 200% 100%;
     background-position: left bottom;
     margin-left: 10px;
-    padding: 0.8rem .6rem;
-    margin-right: .3rem;
+    padding: 0.8rem 0.6rem;
+    margin-right: 0.3rem;
     transition: all 0.5s ease-out; }
     .boxes li:hover {
       background-position: right bottom;
@@ -900,17 +854,18 @@ main {
 
 /* new contact */
 #contact {
-  background: url("../img/ranvv1.jpg");
-  background-size: cover;
+  background: url("../img/contact.jpg");
+  background-size: 100% 100%;
   background-attachment: fixed;
-  background-position: 100% 100%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding: 4rem; }
   #contact .contact-title {
     margin-top: 50px;
     text-align: center; }
     #contact .contact-title #contact-heading {
       font-size: 10vw;
-      color: #cecece; }
+      color: ghostwhite;
+      opacity: .2; }
   #contact .contact-form {
     width: 600px;
     margin: 0 auto;
@@ -988,6 +943,10 @@ main {
   background-color: gray;
   color: black; }
 
+#sentmsg {
+  font-family: open sans-serif;
+  letter-spacing: 2px; }
+
 #main-footer {
   padding: 0.3rem;
   background: white;
@@ -1050,13 +1009,19 @@ main {
     background-position: 50% 50%;
     background-size: contain; }
   #my-background {
-    font-size: 1rem;
+    font-size: 11px;
     letter-spacing: 4px; }
   /* works */
   .projects {
     grid-template-columns: repeat(3, 1fr); }
   .asp .req .req-header {
-    font-size: 1.4rem; } }
+    font-size: 1.4rem; }
+  /* contact  */
+  #contact-intro {
+    left: 25%; }
+  #contact .boxes {
+    width: 50vw;
+    margin: 2rem auto; } }
 
 @media screen and (max-width: 768px) {
   /* homepage */
@@ -1080,7 +1045,7 @@ main {
       margin-top: 2rem;
       font-size: 2vw; }
     main .icons .icon {
-      margin-right: 3px; }
+      margin-right: 15px; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -1099,9 +1064,11 @@ main {
     height: 30vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      width: 9rem;
-      height: 9rem; }
+      width: 15rem;
+      height: 15rem; }
   /*about */
+  .bio #about-txt {
+    font-size: 4rem; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -1117,21 +1084,42 @@ main {
     background-position: 50% 50%;
     background-size: contain; }
   /* works */
+  .wrap-intro #work-text {
+    font-size: 4rem;
+    margin-left: -13px; }
+  #work .sm-heading {
+    font-size: 12px;
+    letter-spacing: 10px; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
   #work .asp {
     display: block;
     padding: 3rem; }
+  #work .asp .req .req-motive {
+    font-size: 25px;
+    text-align: left; }
   /* contact */
+  #contact-intro {
+    left: 20%;
+    top: 25%; }
+    #contact-intro .sm-heading {
+      font-size: 10px;
+      letter-spacing: 10px; }
   #contact {
     grid-template-columns: 1fr; }
-  #contact .contact-form {
-    width: 450px; }
+  .boxes {
+    margin: 2rem auto; }
   .boxes li {
-    font-size: 1.4rem; } }
+    font-size: 1rem; }
+  .contact-title h2 {
+    font-size: 10px; }
+  #contact .contact-form {
+    width: 600px; } }
 
 @media screen and (max-width: 500px) {
   /* homepage */
+  .navbar-wrapper img {
+    width: 180px; }
   .nav-item .nav-link {
     font-size: 2.3rem; }
   #home {
@@ -1161,21 +1149,23 @@ main {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    margin-right: 7px; }
+    margin-right: 15px; }
   /* about page */
   #about {
     padding: 1rem; }
   #about h1 {
     font-size: 5rem; }
+    #about h1 span {
+      font-size: 3rem; }
   .about-info .bio-image {
     width: 100%;
     height: auto; }
   .bio #my-background {
     text-align: left;
-    font-size: 1rem;
+    font-size: 11px;
     letter-spacing: 2px; }
     .bio #my-background .dev-lang {
-      font-size: 1rem; }
+      font-size: 10px; }
   .about-info .job {
     margin-bottom: 0.2rem; }
     .about-info .job .dev-main {
@@ -1198,48 +1188,67 @@ main {
       font-size: 1rem;
       width: 200px; }
       #about .journey .timeline p {
-        font-size: 0.7rem; }
+        font-size: 9px; }
   /* Work page */
   #work .lg-heading {
     font-size: 5rem; }
+    #work .lg-heading span {
+      font-size: 3rem; }
+  #work .sm-heading {
+    font-size: 10px;
+    letter-spacing: 8px; }
   #gh-hint {
-    font-size: .9rem; }
+    font-size: 1.2rem; }
   .section-gh .github-account {
     margin-top: 20px; }
   #work .asp {
     display: block;
-    padding: .5rem; }
+    padding: 1.5rem; }
     #work .asp .req {
-      margin: 0;
+      width: 80%;
+      margin: 0 auto;
       padding: 0; }
       #work .asp .req .req-header {
-        font-size: 1.2rem; }
+        font-size: 1.4rem; }
     #work .asp p {
-      text-align: left;
+      text-align: center;
       padding: 15px; }
   .projects {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    padding: 1rem; }
+  .parallax2 {
+    height: 200px; }
   /* contact page */
+  #contact-intro {
+    left: 20%;
+    top: 40%; }
+    #contact-intro .lg-heading {
+      font-size: 5rem;
+      letter-spacing: 5px; }
+      #contact-intro .lg-heading #contact-text {
+        font-size: 3rem; }
+    #contact-intro .sm-heading {
+      font-size: 9px;
+      letter-spacing: 5px; }
   #contact {
-    grid-template-columns: 1fr; }
-    #contact .lg-heading {
-      font-size: 5rem; }
+    grid-template-columns: 1fr;
+    padding: 1.5rem; }
   #contact .contact-form {
     width: 100%;
-    padding: .8rem .6rem; }
+    padding: 0.8rem 0.6rem; }
     #contact .contact-form .form-control {
       height: 2.8rem;
       font-size: 10px; }
   .boxes {
-    margin-bottom: 2rem; }
+    margin: 2rem auto; }
   .boxes ul li {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.6rem;
+    margin-bottom: 10px;
     float: unset; }
   .contact-title h2 {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 10px;
+    font-weight: 100;
     letter-spacing: 2px; }
   /* footer */
   .footer-profile ul li {
-    font-size: .6rem; } }
+    font-size: 0.6rem; } }
