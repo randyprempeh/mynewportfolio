@@ -81,7 +81,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: #212121;
+    background: black;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -94,18 +94,19 @@
 
   // Portrait
   &-branding {
-    background: darken($primary-color, 0.5);
+    background: gainsboro;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
+    
     // animation slide from bottom
     &.show {
       transform: translate3d(0, 0, 0);
     }
 
     .portrait {
-      width: 20rem;
-      height: 20rem;
-      background: url("../img/rann.jpg");
+      width: 30rem;
+      height:30rem;
+      background: url("../img/head1.png");
       background-size: cover;
       border-radius: 50%;
       bottom: solid 0.3rem $secondary-color;
@@ -131,8 +132,8 @@
   .menu-nav .nav-item > .nav-link::before {
     content: "";
     position: absolute;
-    width: 50%;
-    height: 5px;
+    width: 15%;
+    height: 2px;
     bottom: 0;
     top: 0;
     left: 0;

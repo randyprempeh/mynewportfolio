@@ -24,13 +24,11 @@
 
   .projects {
     grid-template-columns: repeat(3, 1fr);
-     
+
     & .project-details p:hover {
       padding: 3rem;
       font-size: 1.3rem;
       font-family: "Gochi Hand", cursive;
-
-  
     }
   }
 }
@@ -47,14 +45,14 @@
     grid-gap: 1.4rem;
     padding: 1rem;
   }
-  
+
   .bio-image {
     width: 100%;
     height: auto;
   }
-   .job ul li {
-     font-size: 1.3rem;
-   }
+  .job ul li {
+    font-size: 1.3rem;
+  }
   .parallax {
     background-position: 50% 50%;
     background-size: contain;
@@ -63,7 +61,6 @@
     font-size: 11px;
     letter-spacing: 4px;
   }
-  
 
   /* works */
   .projects {
@@ -72,6 +69,16 @@
   .asp .req .req-header {
     font-size: 1.4rem;
   }
+
+  /* contact  */
+  #contact-intro {
+    left: 25%;
+  }
+
+  #contact .boxes {
+    width: 50vw;
+    margin: 2rem auto;
+}
 }
 
 //Tablets
@@ -88,7 +95,7 @@
   #info2 {
     font-size: 7rem;
   }
-  
+
   #home {
     height: 100%;
   }
@@ -102,14 +109,14 @@
       margin-bottom: 1rem;
       font-size: 9vw;
     }
-    
+
     .home-wrap {
       width: 100%;
       margin-top: 2rem;
       font-size: 2vw;
     }
     .icons .icon {
-      margin-right: 3px;
+      margin-right: 15px;
     }
   }
 
@@ -139,12 +146,15 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      width: 9rem;
-      height: 9rem;
+      width: 15rem;
+      height: 15rem;
     }
   }
 
   /*about */
+  .bio #about-txt {
+    font-size: 4rem;
+  }
   .about-info {
     grid-template-areas:
       "bioimage"
@@ -175,6 +185,16 @@
   }
 
   /* works */
+  .wrap-intro #work-text {
+    font-size: 4rem;
+    margin-left: -13px;
+  }
+
+  #work .sm-heading {
+    font-size: 12px;
+    letter-spacing: 10px;
+  }
+
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -183,24 +203,52 @@
     padding: 3rem;
   }
 
+  #work .asp .req .req-motive {
+    font-size: 25px;
+    text-align: left;
+  }
+
   /* contact */
+
+  #contact-intro {
+    left: 20%;
+    top: 25%;
+
+    & .sm-heading {
+      font-size: 10px;
+      letter-spacing: 10px;
+    }
+  }
+
   #contact {
     grid-template-columns: 1fr;
   }
+
+  .boxes {
+    margin: 2rem auto;
+  }
+
+  .boxes li {
+    font-size: 1rem;
+  }
+
+  .contact-title h2 {
+    font-size: 10px;
+  }
   #contact .contact-form {
-    width: 450px;
+    width: 600px;
   }
-  .boxes li{
-    font-size: 1.4rem;
-  }
-  
 }
 
 // Smartphones and small devices
 @include mediaSm {
   /* homepage */
+  .navbar-wrapper img {
+    width: 180px;
+  }
 
-  .nav-item .nav-link {    // addd
+  .nav-item .nav-link {
+    // add
     font-size: 2.3rem;
   }
 
@@ -243,7 +291,7 @@
     width: 40px;
     height: 40px;
     line-height: 40px;
-    margin-right: 7px;
+    margin-right: 15px;
   }
 
   /* about page */
@@ -252,20 +300,23 @@
   }
   #about h1 {
     font-size: 5rem;
+
+    & span {
+      font-size: 3rem;
+    }
+  }
+  .about-info .bio-image {
+    width: 100%;
+    height: auto;
   }
 
-   .about-info .bio-image {
-     width: 100%;
-     height: auto;
-   }
-  
   .bio #my-background {
     text-align: left;
-    font-size: 1rem;
+    font-size: 11px;
     letter-spacing: 2px;
 
     & .dev-lang {
-      font-size: 1rem;
+      font-size: 10px;
     }
   }
   .about-info .job {
@@ -276,7 +327,7 @@
       padding-bottom: 0.4rem;
     }
     & ul {
-      font-size: 1.2rem;   // change or unchnange
+      font-size: 1.2rem;
     }
     & .dev-sub {
       font-size: 0.7rem;
@@ -298,10 +349,10 @@
     & .timeline {
       padding: 0.2rem;
       font-size: 1rem;
-      width: 200px;   // add
+      width: 200px; 
 
       & p {
-        font-size: 0.7rem;
+        font-size: 9px;
       }
     }
   }
@@ -309,72 +360,102 @@
   /* Work page */
   #work .lg-heading {
     font-size: 5rem;
+
+    & span {
+      font-size: 3rem;
+    }
+  }
+  #work .sm-heading {
+    font-size: 10px;
+    letter-spacing: 8px;
   }
 
   #gh-hint {
-    font-size: .9rem;
+    font-size: 1.2rem;
   }
 
   .section-gh .github-account {
     margin-top: 20px;
   }
 
-  #work .asp {  
+  #work .asp {
     display: block;
-    padding: .5rem;
+    padding: 1.5rem;
 
     & .req {
-      margin: 0;
+      width: 80%;
+      margin: 0 auto;
       padding: 0;
 
       & .req-header {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
     }
 
     & p {
-      text-align: left;
+      text-align: center;
       padding: 15px;
     }
   }
   .projects {
     grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .parallax2 {
+    height: 200px;
   }
 
   /* contact page */
-  #contact {
-    grid-template-columns: 1fr;
+  #contact-intro {
+    left: 20%;
+    top: 40%;
 
     & .lg-heading {
       font-size: 5rem;
+      letter-spacing: 5px;
+
+      #contact-text {
+        font-size: 3rem;
+      }
     }
+
+    & .sm-heading {
+      font-size: 9px;
+      letter-spacing: 5px;
+    }
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
   }
   #contact .contact-form {
     width: 100%;
-    padding: .8rem .6rem;
+    padding: 0.8rem 0.6rem;
 
-      & .form-control {
-        height: 2.8rem;
-        font-size: 10px;
-      }
+    & .form-control {
+      height: 2.8rem;
+      font-size: 10px;
+    }
   }
 
   .boxes {
-    margin-bottom: 2rem;   // add
+    margin: 2rem auto; 
   }
-  .boxes ul li{
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    float: unset;    // change
+  .boxes ul li {
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+    float: unset; 
   }
   .contact-title h2 {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 10px;
+    font-weight: 100;
     letter-spacing: 2px;
   }
 
   /* footer */
   .footer-profile ul li {
-    font-size: .6rem;                    // addd
+    font-size: 0.6rem; 
   }
 }

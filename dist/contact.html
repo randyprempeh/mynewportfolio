@@ -59,13 +59,17 @@
             </ul>
         </nav>
     </header>
-    <main id="contact">
+    <section class="contact-section"></section>
+    <div id="contact-intro">
         <h1 id="con-head" class="lg-heading">
             Contact<span id="contact-text" class="text-secondary">me</span>
         </h1>
         <h2 class="sm-heading">
             Link up and lets get talking
         </h2>
+    </div>
+    <main id="contact">
+
         <div class="boxes">
             <ul>
                 <li><a href="#">
@@ -75,8 +79,7 @@
                 </li>
                 <li><a href="#">
                         <span>
-                            <i class="fas fa-phone-volume"></i> </span> +49 151 668 247 24
-
+                            <i class="fas fa-phone-volume"></i> </span> +49 176 433 596 65
                     </a>
                 </li>
                 <li><a href="#">
@@ -110,7 +113,7 @@
                     <input type="submit" id="button" class="form-control submit" value="SEND MESSAGE">
                 </div>
                 <!-- thank you message -->
-                <div class="thankyou_message" style="display:none;color: #00b1a7; font-size:1rem">
+                <div id="sentmsg" class="thankyou_message" style="display:none;color: #fff; font-size:12px">
                     <h2><em>Thanks</em> for your message!
                         I will definitely respond as fast as I can!</h2>
                 </div>
@@ -118,10 +121,11 @@
         </div>
     </main>
 
+
     <footer id="main-footer">
         <div class="footer-profile">
             <div class="address">
-                <ul>Duesseldorf , 40591 </ul>
+                <ul>Koeln , 51065 </ul>
             </div>
             <div class="contact">
                 <ul>0176-43359-665</ul>
@@ -135,12 +139,19 @@
             <small>Randy Prempeh &copy; 2020 </small>
         </div>
     </footer>
-
     <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
     <script src="js/main.js"></script>
-
-
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var scroll_position = $(window).scrollTop() / 2;
+            $('section').css({
+                'background-position-x': - scroll_position + 'px',
+            })
+        })
+    </script>
 </body>
 
 </html>

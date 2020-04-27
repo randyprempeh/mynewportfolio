@@ -85,21 +85,6 @@ function showScroll() {
 
 document.addEventListener("scroll", _.throttle(showScroll, 200));
 
-/* to handle multiple scroll events at a time 
-function throttle(fn, wait) {
-  var time = Date.now();
-  return function () {
-    if ((time + wait - Date.now()) < 0) {
-      fn();
-      time = Date.now();
-    }
-  }
-}
- */
-
-/* contact div  */
-
-/* console.log(personalDetails); */
 
 let contactBody = document.getElementById("contact-body");
 function fadeinDetails() {
@@ -113,7 +98,7 @@ function fadeinDetails() {
   }
 }
 
-contactBody = window.onload = function(){
-  fadeinDetails();
-}
+contactBody = window.onload = function () {
+  fadeinDetails(); 
+} 
 

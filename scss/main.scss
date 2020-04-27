@@ -21,12 +21,10 @@ h1,
 h2,
 h3 {
   margin: 0;
-  /*  color: #fff; */
   letter-spacing: 5px;
 
   &.lg-heading {
-    font-size: 6vw;
-    margin-top: 20vh;
+    font-size: 14vw;
   }
   &.sm-heading {
     margin-bottom: 2rem;
@@ -60,15 +58,10 @@ header {
   padding: 0;
 }
 main {
-  padding: 4rem;
   min-height: calc(100vh - 4rem);
-  overflow: hidden;
 
-  /* video css / sVG */
 
   #bg {
-    height: 75vh;
-    width: 100%;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -94,7 +87,6 @@ main {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    /*  padding: 3rem; */
 
     & #logo {
       width: 100%;
@@ -146,7 +138,6 @@ main {
       to {
         stroke-dashoffset: 0;
         stroke-dasharray: 0;
-        /*  stroke: #111;  */
         opacity: 0;
       }
     }
@@ -159,116 +150,17 @@ main {
         fill: #34eaff;
       }
     }
-
-    /*  #text-ready {
-      width: 100%;
-      margin-top: 5rem;
-      animation: fill 0.5s ease fowards 3.5s;
-      opacity: 0.5;
-    }
-
-    #text-ready path:nth-child(1) {
-      stroke-dasharray: 148;
-      stroke-dashoffset: 148;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(2) {
-      stroke-dasharray: 257;
-      stroke-dashoffset: 257;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(3) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(4) {
-      stroke-dasharray: 46;
-      stroke-dashoffset: 46;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(5) {
-      stroke-dasharray: 209;
-      stroke-dashoffset: 209;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(6) {
-      stroke-dasharray: 346;
-      stroke-dashoffset: 346;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(7) {
-      stroke-dasharray: 257;
-      stroke-dashoffset: 257;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(8) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(9) {
-      stroke-dasharray: 209;
-      stroke-dashoffset: 209;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(10) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(11) {
-      stroke-dasharray: 253;
-      stroke-dashoffset: 253;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(12) {
-      stroke-dasharray: 123;
-      stroke-dashoffset: 123;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(13) {
-      stroke-dasharray: 157;
-      stroke-dashoffset: 157;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(14) {
-      stroke-dasharray: 257;
-      stroke-dashoffset: 257;
-      animation: ready-path 4s ease forwards;
-    }
-    #text-ready path:nth-child(15) {
-        stroke-dasharray: 280;
-        stroke-dashoffset: 280;
-        animation: ready-path 4s ease forwards;
-    }
-
-    @keyframes ready-path {
-        to {
-          stroke-dashoffset: 0;
-        }
-      }
-  
-      @keyframes fill {
-        from {
-          background: #a3defa;
-        }
-        to {
-          background: #df3adf;
-        }
-      } */
   }
 
   .home-wrap {
     width: 50%;
     margin: 0 auto;
     position: relative;
-    /* left: 10%; */
     margin-bottom: 1rem;
   }
 
   #home-text2 {
-    color: #000;
+    color: #00b1a7;
     margin-bottom: 0.4rem;
   }
 
@@ -276,6 +168,7 @@ main {
     margin-top: 0.5rem;
     height: 100%;
     width: 100%;
+    margin-bottom: 20px;
 
     &::before {
       content: "";
@@ -393,14 +286,27 @@ main {
 
 /* about scss */
 #about-body {
-  background: #160c0d;
+  background: #fff;
+}
+
+#about {
+  padding: 4rem;
+}
+
+.parallax {
+  background-image: url("../img/randy4v.png");
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #my-background {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 2;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
 
   & #fed {
     color: #54aa34;
@@ -410,31 +316,20 @@ main {
   }
 
   & .dev-lang {
-    color: lightgray;
+    color: black;
     text-shadow: #fff;
-    font-weight: 100;
+    font-weight: 900;
     letter-spacing: 5px;
   }
 }
-#about .lg-heading {
-  margin-top: 50px;
-}
-.textify {
-  color: $secondary-color;
-  font-size: 8vw;
-  font-style: italic;
-  font-family: "Gochi Hand", cursive;
-  transition: all 0.5s ease-in-out;
-  padding: 1rem;
-}
+
 #about-txt {
-  font-size: 4.3rem;
+  font-size: 6rem;
   font-weight: 700;
   margin-left: -20px;
   letter-spacing: -2px;
 }
 .about-info {
-  background: rgba(0, 0, 0, 0.3);
   padding: 2rem;
   display: grid;
   grid-gap: 3rem;
@@ -445,31 +340,17 @@ main {
 
   .bio-image {
     grid-area: bioimage;
-    margin: auto;
-    transition: filter 0.5s ease-in-out;
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    margin-top: 20px;
-
-    &:hover {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-      opacity: 1.6;
-    }
   }
 
   .bio {
     grid-area: bio;
-    /* font-size: 1.5rem; */
+    color: dimgrey;
   }
 
-   #bio-header {
-     font-size: 10vw;
-   }
 
-   #skill-txt {
-     font-size: 8vw;
-   }
+  #skill-txt {
+    font-size: 8vw;
+  }
   .job-1 {
     grid-area: job1;
     border-left: solid 5px#54aa34;
@@ -501,12 +382,12 @@ main {
     margin-bottom: 9.5rem;
     position: relative;
     width: 100%;
-    /*  max-width: 400px; */
+    color: dimgray;
 
     .dev-main {
       font-size: 2.5rem;
       text-align: center;
-      border-bottom: 2px solid gray;
+      border-bottom: 1px solid #bdb8a9;
       padding-bottom: 1rem;
     }
 
@@ -531,7 +412,7 @@ main {
     }
 
     li {
-      color: silver;
+      color: black;
       opacity: 0.9;
       letter-spacing: 4px;
     }
@@ -585,29 +466,22 @@ main {
   }
 }
 
-.parallax {
-  background-image: url("../img/randy4.jpg");
-  background-attachment: fixed;
-  height: 400px;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .journey {
   padding: 10rem;
   width: 50vw;
   margin: 40px auto;
   padding: 10px 20px 10px 20px;
-  border-left: 4px solid $secondary-color;
+  border-left: 2px solid $secondary-color;
 
   & span {
-    font-family: "Gochi Hand", cursive;
+    font-family: sans-serif fantasy;
     color: $secondary-color;
 
     &:hover {
       @include easeOut;
-      opacity: 0.4;
-      color: greenyellow;
+      opacity: 0.8;
+      color: black;
     }
   }
 
@@ -617,38 +491,36 @@ main {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #54aa34;
-    border: 2px solid #000;
+    background-color: #000;
+    border: 2px solid #f5f3ed;
     position: absolute;
     top: 7px;
     left: -29px;
   }
 
   & .timeline {
-    background-color: #212121;
+    background-color: peachpuff;
     padding: 0.8rem;
     margin-bottom: 1.6rem;
-    font-size: 1.4rem;
     border: 2px solid transparent;
     line-height: 1;
     letter-spacing: 1px;
     position: relative;
-    color: gray;
+    color: black;
     border-radius: 9px;
-    box-shadow: 0px 1px 2px 3px #313131;
+    box-shadow: 0px 9px 14px 5px #313131;
 
     & p {
-      font-family: open sans-serif;
-      font-style: italic;
+      font-family: sans-serif;
       font-weight: 400;
-      font-size: 1.2rem;
+      font-size: 11px;
     }
 
     & button {
       width: 150px;
       border: none;
       border-radius: 10px;
-      background: transparent;
+      background: black;
       overflow: hidden;
       padding: 0.7rem 0.25rem;
       box-shadow: 2px 1px 5px #000;
@@ -662,8 +534,7 @@ main {
         strong {
           flex: 1 0 50%;
           color: white;
-          font-size: 18px;
-          /*  font-family: "Teko", sans-serif; */
+          font-size: 11px;
         }
         &:hover {
           transform: translateX(-50%);
@@ -672,7 +543,7 @@ main {
     }
 
     #resume:hover {
-      background: rgba(0, 0, 0, 0.6);
+      background: transparent;
     }
   }
   & .timeline::after {
@@ -681,7 +552,7 @@ main {
     height: 0;
     border-style: solid;
     border-width: 8px;
-    border-color: transparent #ff0 transparent transparent;
+    border-color: transparent #000 transparent transparent;
     position: absolute;
     top: 7px;
     left: -17px;
@@ -689,7 +560,8 @@ main {
 }
 .journey .timeline:hover {
   @include easeOut;
-  color: white;
+  color: black;
+  font-weight: 900;
 }
 #para {
   text-align: center;
@@ -706,30 +578,109 @@ main {
   clear: both;
   margin-bottom: 2rem;
   transition: opacity 2s ease;
-  /*  @include easeOut; */
   opacity: 1;
 }
 
 .hidden {
   opacity: 0;
 }
+
+
 /* Portfolio / Works */
+
+#wrapper-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #1a1a1a;
+  background: rgba(0, 0, 0, 0.2);
+}
+#wrapper-header:before {
+  animation: no-transform 3s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  transform: translateY(-6rem);
+  content: "";
+  background: url("../img/brand.jpg") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@keyframes no-transform {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-pop-up {
+  animation: no-transform 0.6s cubic-bezier(0, 0.69, 0.3, 1.14) forwards;
+  opacity: 0;
+  transform: translateY(-2rem) scale(0.8);
+}
+
+.header-down-arrow {
+  animation: pulse 2s 3s ease-out infinite;
+  position: absolute;
+  left: 0;
+  bottom: 8vh;
+  text-align: center;
+  right: 0;
+  z-index: 10;
+}
+
+.header-down-arrow img {
+  animation: no-transform 1s 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(4rem);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.parallax2 {
+  background-image: url("../img/do.jpg");
+  background-attachment: fixed;
+  height: 400px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 #work .lg-heading {
   margin-top: 50px;
   color: dimgrey;
+  text-align: center;
 }
 
 #work .sm-heading {
-  color: lightgray;
+  font-size: 20px;
+  letter-spacing: 15px;
 }
 
 #work-text {
-  font-size: 4.3rem;
+  font-size: 6rem;
   font-weight: 700;
   margin-left: -20px;
   letter-spacing: -2px;
 }
 .projects {
+  padding: 2rem;
   position: relative;
   display: grid;
   grid-gap: 0.7rem;
@@ -874,43 +825,71 @@ main {
     }
 
     & .req-header {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: burlywood;
 
       & .nbr {
         color: #cecece;
         font-family: serif;
-        /*         background: lightgrey; */
         padding: 2px;
       }
     }
 
     & .req-motive {
-      font-size: 20px;
+      font-size: 15px;
       width: 100%;
       height: auto;
     }
 
     &:hover {
-      background: #000;
+      background: rgba(0, 0, 0, 0.8);
       @include easeOut;
       color: white;
       border-radius: 10px;
+      cursor: pointer;
     }
   }
 }
 
-/* Contact */
-#contact .lg-heading {
-  margin-top: 50px;
+/* Contact section with wallpaper */
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 1700px;
+  background: url("../img/bb.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-#contact .sm-heading {
-  font-size: 5vw;
-  color: lightgray;
-  opacity: 0.2;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-;
+#contact-intro {
+  margin: 0;
+  position: absolute;
+  padding: 0;
+  left: 30%;
+  top: 30%;
+  color: dimgrey;
+
+  .lg-heading {
+    font-size: 14vw;
+    letter-spacing: 15px;
+    margin: 0;
+
+     #contact-text {
+     font-size: 6rem;
+     font-weight: 700;
+     margin-left: -20px;
+     letter-spacing: -2px;
+  }
+}
+
+.sm-heading {
+    font-size: 20px;
+    letter-spacing: 15px;
+    margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+ }
 }
 
 .personal-infobox {
@@ -926,32 +905,26 @@ main {
   }
 }
 
-#contact-text {
-  font-size: 4.3rem;
-  font-weight: 700;
-  margin-left: -20px;
-  letter-spacing: -2px;
-}
 .boxes {
-  width: 50vw;                    // change
-  margin-right: 2rem ;
- 
-   & ul {
-     list-style: none;
-     display: inline;
-   }
+  width: 50vw; 
+  margin: 2rem auto;
+
+  & ul {
+    list-style: none;
+    display: inline;
+  }
 
   li {
-    font-size: 2.3rem;
+    font-size: 15px;
     text-align: center;
     border-left: 3px solid #fff;
     background: rgba(0, 0, 0, 0.4);
-    background: linear-gradient(to right,#2121 50%, #00b1a7 50%);
+    background: linear-gradient(to right, #2121 50%, #00b1a7 50%);
     background-size: 200% 100%;
-    background-position:left bottom;
-    margin-left:10px;
-    padding: 0.8rem .6rem;
-    margin-right: .3rem;
+    background-position: left bottom;
+    margin-left: 10px;
+    padding: 0.8rem 0.6rem;
+    margin-right: 0.3rem;
     @include easeOut;
 
     &:hover {
@@ -959,20 +932,21 @@ main {
       border-left: 29px solid #212121;
     }
 
-     & a {
-       text-decoration: none;
-       color: white;
-     }
+    & a {
+      text-decoration: none;
+      color: white;
+    }
   }
-
 }
 /* new contact */
+
 #contact {
-  background: url("../img/ranvv1.jpg");
-  background-size: cover;
+  background: url("../img/contact.jpg");
+  background-size: 100% 100%;
   background-attachment: fixed;
-  background-position: 100% 100%;
   background-repeat: no-repeat;
+  padding: 4rem;
+
 
   & .contact-title {
     margin-top: 50px;
@@ -980,7 +954,8 @@ main {
 
     #contact-heading {
       font-size: 10vw;
-      color: #cecece;
+      color: ghostwhite;
+      opacity: .2;
     }
   }
 
@@ -1005,7 +980,6 @@ main {
       color: white;
       transition: 0.4s ease-in-out;
       font-size: 18px;
-     //change
 
       &:focus {
         box-shadow: none;
@@ -1082,6 +1056,11 @@ main {
   @extend .btn;
   background-color: lighten($primary-color, 50);
   color: black;
+}
+
+#sentmsg {
+  font-family: open sans-serif;
+  letter-spacing: 2px;
 }
 #main-footer {
   padding: 0.3rem;
