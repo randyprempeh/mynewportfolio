@@ -1,129 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Teko&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
     <title>welcome to my Portfolio</title>
-</head>
+  </head>
 
-<body id="bg-img" onload="offLoad()">
-    <header>
-        <div class="navbar-wrapper">
-            <div class="mysign">
-                <a href="./">
-                    <img src="./img/logo_111.png" alt="rplogo">
-                </a>
-            </div>
-            <div class="menu-btn">
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-            </div>
+  <body id="bg-img" onload="offLoad()">
+    <header id="header">
+      <div class="navbar-wrapper">
+        <div class="mysign">
+          <a href="./">
+            <img src="./img/logo_111.png" alt="rplogo" />
+          </a>
+        </div>
+        <div class="menu-btn">
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+          <div class="btn-line"></div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
         </div>
 
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait">
-                </div>
-            </div>
-
-            <ul class="menu-nav">
-                <li class="nav-item current">
-                    <a href="index.html" class="nav-link">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="work.html" class="nav-link">
-                        Works
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
-                        Contact Me
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <ul class="menu-nav">
+          <li class="nav-item current">
+            <a href="index.html" class="nav-link"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> About </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link"> Works </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Contact Me </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main id="home">
-        <div class="home-intro">
-            <svg id="codeMe" width="100%" height="100vh">
-                <mask id="maskLayer">
-                    <rect width="100%" height="100%" fill="#fff"></rect>
-                    <text x="10%" y="60%" id="info">I AM RANDY</text>
-                    <!-- display only in mobile/Tablet device -->
-                    <text x="10" y="20" id="info2">
-                        <tspan dx="30%" dy="38%" x="10" y="45">I</tspan>
-                        <tspan dx="30%" dy="45%" x="15" y="65">AM</tspan>
-                        <tspan dx="30%" dy="52%" x="20" y="85">RANDY</tspan>
-                    </text>
-                </mask>
-                <rect id="masked" width="100%" height="100%" fill="#000"></rect>
-            </svg>
-            <video src="./img/Words.mp4" id="bg" autoplay loop></video>
-
-            <svg id="logo" width="471" height="83" viewBox="0 0 471 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="path"
-                    d="M96.488 6.088L77.096 73H67.304L51.752 19.144L35.624 73L25.928 73.096L7.20801 6.088H16.52L31.112 62.824L47.24 6.088H57.032L72.392 62.632L87.08 6.088H96.488Z"
-                    stroke="white" stroke-width="10" fill="none" />
-                <path class="path"
-                    d="M114.784 13.192V35.56H139.168V42.76H114.784V65.8H142.048V73H106.048V5.992H142.048V13.192H114.784Z"
-                    stroke="white" stroke-width="10" />
-                <path class="path" d="M164.003 65.896H187.427V73H155.267V6.088H164.003V65.896Z" stroke="white"
-                    stroke-width="10" />
-                <path class="path"
-                    d="M193.441 39.496C193.441 32.968 194.913 27.112 197.857 21.928C200.801 16.68 204.801 12.584 209.857 9.64C214.977 6.696 220.641 5.224 226.849 5.224C234.145 5.224 240.513 6.984 245.953 10.504C251.393 14.024 255.361 19.016 257.857 25.48H247.393C245.537 21.448 242.849 18.344 239.329 16.168C235.873 13.992 231.713 12.904 226.849 12.904C222.177 12.904 217.985 13.992 214.273 16.168C210.561 18.344 207.648 21.448 205.536 25.48C203.424 29.448 202.368 34.12 202.368 39.496C202.368 44.808 203.424 49.48 205.536 53.512C207.648 57.48 210.561 60.552 214.273 62.728C217.985 64.904 222.177 65.992 226.849 65.992C231.713 65.992 235.873 64.936 239.329 62.824C242.849 60.648 245.537 57.544 247.393 53.512H257.857C255.361 59.912 251.393 64.872 245.953 68.392C240.513 71.848 234.145 73.576 226.849 73.576C220.641 73.576 214.977 72.136 209.857 69.256C204.801 66.312 200.801 62.248 197.857 57.064C194.913 51.88 193.441 46.024 193.441 39.496Z"
-                    stroke="white" stroke-width="10" />
-                <path class="path"
-                    d="M301.197 73.672C294.989 73.672 289.325 72.232 284.205 69.352C279.085 66.408 275.021 62.344 272.013 57.16C269.069 51.912 267.597 46.024 267.597 39.496C267.597 32.968 269.069 27.112 272.013 21.928C275.021 16.68 279.085 12.616 284.205 9.736C289.325 6.792 294.989 5.32 301.197 5.32C307.469 5.32 313.165 6.792 318.285 9.736C323.405 12.616 327.437 16.648 330.381 21.832C333.325 27.016 334.797 32.904 334.797 39.496C334.797 46.088 333.325 51.976 330.381 57.16C327.437 62.344 323.405 66.408 318.285 69.352C313.165 72.232 307.469 73.672 301.197 73.672ZM301.197 66.088C305.869 66.088 310.061 65 313.773 62.824C317.549 60.648 320.493 57.544 322.605 53.512C324.781 49.48 325.869 44.808 325.869 39.496C325.869 34.12 324.781 29.448 322.605 25.48C320.493 21.448 317.581 18.344 313.869 16.168C310.157 13.992 305.933 12.904 301.197 12.904C296.461 12.904 292.237 13.992 288.525 16.168C284.813 18.344 281.869 21.448 279.693 25.48C277.581 29.448 276.525 34.12 276.525 39.496C276.525 44.808 277.581 49.48 279.693 53.512C281.869 57.544 284.813 60.648 288.525 62.824C292.301 65 296.525 66.088 301.197 66.088Z"
-                    stroke="white" stroke-width="10" />
-                <path class="path"
-                    d="M414.202 6.568V73H405.466V23.464L383.385 73H377.242L355.065 23.368V73H346.329V6.568H355.737L380.314 61.48L404.889 6.568H414.202Z"
-                    stroke="white" stroke-width="10" />
-                <path class="path"
-                    d="M437.753 13.192V35.56H462.137V42.76H437.753V65.8H465.017V73H429.017V5.992H465.017V13.192H437.753Z"
-                    stroke="white" stroke-width="10" />
-            </svg>
-
-
-            <div class="home-wrap">
-                <h2 id="home-text2" class="sm-heading">
-                    Web Developer, Marketer & Visionary
-                </h2>
-                <div class="icons">
-                    <a href="https://www.xing.com/profile/RANDY_Prempeh/cv?sc_o=mxb_p" class="icon icon-xing">
-                        <i class="fa fa-xing"></i>
-                    </a>
-                    <a href="https://www.facebook.com/randy.prempeh.1" class="icon icon-facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="linkedin.com/in/randy-prempeh-aa525939" class="icon icon-linkedin">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/randyprempeh" class="icon icon-github">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/rp_codes/" class="icon icon-instagram">
-                        <i class="fa fa-instagram"></i>
-                    </a>
+      <section class="introduction">
+        <div id="introductionBgAddition" class="introduction-addition-bg"></div>
+        <div id="introductionBg" class="introduction-bg"></div>
+        <div class="container">
+          <div class="row">
+            <div class="introduction-inner" id="introductionInner">
+              <div class="content">
+                <div class="content-inner">
+                  <h1>
+                    <div class="line">
+                      <span>Hello there, </span>
+                    </div>
+                    <div class="line">
+                      <span id="p-name">I'm Randy Prempeh</span>
+                    </div>
+                  </h1>
+                  <p id="web-paragragh">
+                    A web developer based in Cologne, I build user interfaces on
+                    the internet, thrilled by design and the state of the art
+                    technology. Let me walk you through my new profound world in
+                    web development.
+                  </p>
+                  <div id="abt-me" class="btn-row">
+                    <a href="about.html">About me</a>
+                  </div>
                 </div>
+              </div>
+              <div class="image">
+                <div class="image-inner">
+                  <img src="./img/oliver.png" id="profile-img" alt="Head" />
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </section>
+      <section class="social-media">
+        <div class="icons">
+          <a
+            href="https://www.xing.com/profile/RANDY_Prempeh/cv?sc_o=mxb_p"
+            class="icon icon-xing"
+          >
+            <i class="fa fa-xing"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/randy.prempeh.1"
+            class="icon icon-facebook"
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a
+            href="linkedin.com/in/randy-prempeh-aa525939"
+            class="icon icon-linkedin"
+          >
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/randyprempeh" class="icon icon-github">
+            <i class="fa fa-github"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/rp_codes/"
+            class="icon icon-instagram"
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <!--   <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>    -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
