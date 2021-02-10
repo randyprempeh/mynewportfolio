@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css?family=Teko&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -20,12 +25,12 @@
     <title>welcome to my Portfolio</title>
   </head>
 
-  <body id="bg-img" onload="offLoad()">
+  <body id="hide-body">
     <header id="header">
       <div class="navbar-wrapper">
         <div class="mysign">
           <a href="./">
-            <img src="./img/logo_111.png" alt="rplogo" />
+            <img src="./img/logorp3.png" alt="rplogo" />
           </a>
         </div>
         <div class="menu-btn">
@@ -67,26 +72,35 @@
                 <div class="content-inner">
                   <h1>
                     <div class="line">
-                      <span>Hello there, </span>
+                      <span>Hi,</span>
                     </div>
-                    <div class="line">
-                      <span id="p-name">I'm Randy Prempeh</span>
+                    <div class="line line-2">
+                      <span id="p-name">I'm Randy, web developer</span>
                     </div>
                   </h1>
                   <p id="web-paragragh">
-                    A web developer based in Cologne, I build user interfaces on
-                    the internet, thrilled by design and the state of the art
-                    technology. Let me walk you through my new profound world in
-                    web development.
+                    I build user interfaces on the internet, thrilled by design
+                    and the state of the art technology. Let me walk you through
+                    my new profound world in web development.
                   </p>
-                  <div id="abt-me" class="btn-row">
-                    <a href="about.html">About me</a>
+                  <div id="abt-me" class="home_button btn-row">
+                    <a id="redirect" href="about.html">about me</a>
                   </div>
                 </div>
               </div>
               <div class="image">
                 <div class="image-inner">
-                  <img src="./img/oliver.png" id="profile-img" alt="Head" />
+                  <img
+                    srcset="
+                      ./img/kofiresiz3300w.png 300w,
+                      ./img/kofiscaled.png     900w
+                    "
+                    sizes="(max-width: 500px) 300px,
+                                     900px"
+                    src="./img/kofiscaled.png"
+                    id="profile-img"
+                    alt="Head"
+                  />
                 </div>
               </div>
             </div>
@@ -126,12 +140,12 @@
       </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
-    <!--   <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>    -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
