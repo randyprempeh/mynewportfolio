@@ -1,6 +1,5 @@
 /* variable declaration */
 /* declare variables for config */
-/* $home-bgn: url(../img/unspl.jpg); */
 /* Mixins */
 .navbar-wrapper {
   width: 100%;
@@ -8,10 +7,11 @@
   .navbar-wrapper:hover {
     cursor: pointer; }
   .navbar-wrapper .mysign {
-    display: inline; }
+    display: inline-block;
+    margin: 10px 0 0 70px; }
   .navbar-wrapper img {
-    width: 250px;
-    height: 100px; }
+    width: 50px;
+    height: 60px; }
 
 /*menu Button */
 .menu-btn {
@@ -24,10 +24,10 @@
   transition: all 0.5s ease-out;
   /* menu turns to close icon */ }
   .menu-btn .btn-line {
-    width: 1.5rem;
+    width: 1.7rem;
     height: 0.2rem;
     margin-bottom: 0.2rem;
-    background: #afacac;
+    background: #00b1a7;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -90,12 +90,12 @@
   .menu .menu-nav .nav-item > .nav-link::before {
     content: "";
     position: absolute;
-    width: 15%;
-    height: 2px;
+    width: 25%;
+    height: 5px;
     bottom: 0;
     top: 0;
     left: 0;
-    background-color: red;
+    background-color: #00b1a7;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -114,7 +114,7 @@
       color: bisque; }
   .menu .nav-link {
     display: inline-block;
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     padding: 1rem 0;
     color: gray;
@@ -136,14 +136,14 @@
   box-sizing: border-box; }
 
 body {
+  background-color: #fff;
   color: #fff;
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Teko", sans-serif;
-  line-height: 1.5; }
-  body#bg-img {
-    background: #fff; }
+  font-family: "Aclonica", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden; }
 
 h1,
 h2,
@@ -153,7 +153,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 14vw; }
+    font-size: 8vw; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -166,8 +166,9 @@ a {
 
 header {
   position: fixed;
-  z-index: 2;
-  width: 100%; }
+  z-index: 6;
+  width: 100%;
+  display: block; }
 
 .text-secondary {
   color: #00b1a7;
@@ -182,13 +183,11 @@ header {
 
 main {
   min-height: calc(100vh - 4rem);
-  /* new home GSAP animation */
-  /* keyframes */ }
+  /* home GSAP animation */ }
   main .introduction {
     height: 100vh;
     position: relative;
-    background: #000;
-    color: #fff; }
+    background: #fff; }
     main .introduction .introduction-addition-bg {
       background: #00b1a7;
       position: absolute;
@@ -198,7 +197,7 @@ main {
       bottom: 0;
       height: 100%; }
     main .introduction .introduction-bg {
-      background: #000;
+      background: #fff;
       position: absolute;
       left: 0;
       right: 0;
@@ -208,149 +207,158 @@ main {
     main .introduction .introduction-inner {
       width: 100%;
       height: 100vh;
-      display: flex;
-      position: relative;
+      display: grid;
+      grid-template-columns: 40% 60%;
       overflow: hidden; }
       main .introduction .introduction-inner .content {
-        width: 80%;
+        width: 100%;
         height: 100%;
         display: flex;
         align-items: center; }
         main .introduction .introduction-inner .content .content-inner {
-          width: 60%;
-          margin: 0 auto; }
+          color: #000;
+          width: 90%;
+          margin: 20px 0 0 70px; }
           main .introduction .introduction-inner .content .content-inner h1 {
-            font-size: 3.6rem;
-            line-height: 2.8rem;
-            margin: 32px 0 0;
-            width: 500px; }
+            font-size: 88px;
+            line-height: 1.2;
+            margin: 32px 0 0 0;
+            width: 100%; }
             main .introduction .introduction-inner .content .content-inner h1 .line {
               overflow: hidden;
-              height: 70px;
+              height: 85px;
               position: relative; }
               main .introduction .introduction-inner .content .content-inner h1 .line span {
                 position: absolute; }
-              main .introduction .introduction-inner .content .content-inner h1 .line #p-name {
-                color: #00b1a7; }
-          main .introduction .introduction-inner .content .content-inner p {
-            font-size: 1.3rem;
-            color: lightgray;
-            letter-spacing: 4px;
-            line-height: 1.4;
-            width: 450px;
-            margin: 32px 0 80px; }
-          main .introduction .introduction-inner .content .content-inner .btn-row a {
+            main .introduction .introduction-inner .content .content-inner h1 .line-2 {
+              height: 80px; }
+              main .introduction .introduction-inner .content .content-inner h1 .line-2 #p-name {
+                color: #00b1a7;
+                font-size: 30px;
+                font-weight: 200;
+                letter-spacing: 1px;
+                line-height: 1.5; }
+        main .introduction .introduction-inner .content p {
+          font-size: 0.8rem;
+          color: #000;
+          letter-spacing: 2px;
+          line-height: 1.6;
+          width: 100%;
+          margin-bottom: 30px; }
+        main .introduction .introduction-inner .content .home_button {
+          margin-top: 30px; }
+          main .introduction .introduction-inner .content .home_button #redirect {
             display: inline-block;
-            font-size: 1rem;
-            padding: 10px 30px;
+            font-size: 1.2rem;
+            padding: 15px 40px;
             text-decoration: none;
             font-weight: 600;
             color: #00b1a7;
             border-radius: 100px;
-            border: 1px solid white;
-            transition: 0.6s linear ease-in; }
-            main .introduction .introduction-inner .content .content-inner .btn-row a:hover {
-              background: white;
-              color: black; }
-      main .introduction .introduction-inner .image {
-        position: relative;
-        width: 40%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end; }
-        main .introduction .introduction-inner .image .image-inner img {
-          width: 500px;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 1; }
-  main .social-media {
-    width: 700px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    margin: auto;
-    opacity: 0; }
-  main .icons {
-    margin-top: 0.5rem;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 20px; }
-    main .icons::before {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle; }
-    main .icons .icon {
-      text-align: center;
-      display: inline-block;
-      font-size: 40px;
-      line-height: 70px;
-      height: 70px;
-      width: 70px;
-      margin-right: 20px;
-      border-radius: 100%;
-      position: relative; }
-      main .icons .icon::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-radius: 100%;
-        z-index: -1; }
-      main .icons .icon::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        vertical-align: middle;
-        width: 100%;
-        height: 100%;
-        transform: scale(0);
-        background: #4099ff;
-        border-radius: 100%;
-        z-index: -1; }
-      main .icons .icon:hover {
-        animation-name: bubble2;
-        animation-duration: 0.5s;
-        animation-delay: 0.1s;
-        animation-fill-mode: forwards; }
-        main .icons .icon:hover::after {
-          animation-name: bubble;
-          animation-duration: 0.5s;
-          animation-fill-mode: forwards; }
-        main .icons .icon:hover.icon-xing {
-          color: #4099ff; }
-          main .icons .icon:hover.icon-xing::after {
-            background: #4099ff; }
-        main .icons .icon:hover.icon-facebook {
-          color: #3b5998; }
-          main .icons .icon:hover.icon-facebook::after {
-            background: #3b5998; }
-        main .icons .icon:hover.icon-linkedin {
-          color: #0077B5; }
-          main .icons .icon:hover.icon-linkedin::after {
-            background: #0077B5; }
-        main .icons .icon:hover.icon-github {
-          color: #333; }
-          main .icons .icon:hover.icon-github::after {
-            background: #333; }
-        main .icons .icon:hover.icon-instagram {
-          color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-          main .icons .icon:hover.icon-instagram::after {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+            border: 1px solid #00b1a7;
+            transition: 0.8s linear ease-in-out; }
+            main .introduction .introduction-inner .content .home_button #redirect:hover {
+              background: #00b1a7;
+              cursor: pointer;
+              color: #000;
+              border: 1px solid transparent;
+              box-shadow: 2px 5px 2px #212121; }
+    main .introduction .image .image-inner img {
+      width: 900px;
+      display: block;
+      position: absolute;
+      bottom: 20%;
+      right: 0;
+      z-index: 1; }
 
+.social-media {
+  width: 700px;
+  height: 100px;
+  position: absolute;
+  top: 74%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 auto;
+  opacity: 0; }
+
+.icons {
+  margin-top: 0.5rem;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 20px; }
+  .icons::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .icons .icon {
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 70px;
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    border-radius: 100%;
+    position: relative;
+    color: gray; }
+    .icons .icon::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 100%;
+      z-index: -1; }
+    .icons .icon::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      background: #4099ff;
+      border-radius: 100%;
+      z-index: -1; }
+    .icons .icon:hover {
+      animation-name: bubble2;
+      animation-duration: 0.5s;
+      animation-delay: 0.1s;
+      animation-fill-mode: forwards; }
+      .icons .icon:hover::after {
+        animation-name: bubble;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards; }
+      .icons .icon:hover.icon-xing {
+        color: #4099ff; }
+        .icons .icon:hover.icon-xing::after {
+          background: #4099ff; }
+      .icons .icon:hover.icon-facebook {
+        color: #3b5998; }
+        .icons .icon:hover.icon-facebook::after {
+          background: #3b5998; }
+      .icons .icon:hover.icon-linkedin {
+        color: #0077b5; }
+        .icons .icon:hover.icon-linkedin::after {
+          background: #0077b5; }
+      .icons .icon:hover.icon-github {
+        color: #333; }
+        .icons .icon:hover.icon-github::after {
+          background: #333; }
+      .icons .icon:hover.icon-instagram {
+        color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .icons .icon:hover.icon-instagram::after {
+          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+/* keyframes */
 @keyframes bubble {
   0% { }
   100% {
@@ -363,21 +371,13 @@ main {
 
 /* about scss */
 #about-body {
-  background: #000; }
+  background: #fff; }
 
 #about {
   padding: 4rem; }
 
-.parallax {
-  background-image: url("../img/code.jpg");
-  background-attachment: fixed;
-  height: 300px;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
 #my-background {
-  font-size: 17px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 2;
   letter-spacing: 1px; }
@@ -386,14 +386,14 @@ main {
   #my-background #bed {
     color: #df3adf; }
   #my-background .dev-lang {
-    color: #ffff;
+    color: #000;
     font-weight: 900;
     letter-spacing: 5px; }
 
 #about-txt {
   font-size: 6rem;
   font-weight: 700;
-  margin-left: -20px;
+  margin-left: -35px;
   letter-spacing: -2px; }
 
 .about-info {
@@ -408,7 +408,7 @@ main {
     grid-area: bio;
     color: dimgrey; }
   .about-info #skill-txt {
-    font-size: 8vw; }
+    font-size: 5vw; }
   .about-info .job-1 {
     grid-area: job1;
     border-left: solid 5px #54aa34; }
@@ -449,10 +449,10 @@ main {
     .about-info .job ul {
       list-style: none;
       display: inline-block;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       text-transform: uppercase; }
     .about-info .job li {
-      color: #fff;
+      color: #000;
       opacity: 0.9;
       letter-spacing: 4px; }
     .about-info .job .overlay {
@@ -502,7 +502,7 @@ main {
 .hidden {
   opacity: 0; }
 
-/* REFINED */
+/* REFINED timeline  */
 .career_section {
   padding: 3em;
   height: 100vh;
@@ -511,19 +511,18 @@ main {
   color: dimgrey;
   margin-bottom: 150px; }
   .career_section blockquote {
-    font-size: 2.3em;
+    font-size: 1.8em;
     width: 30%;
     margin-top: 3%;
     position: absolute; }
     .career_section blockquote #spanny {
       width: 100%;
-      background: red;
+      background: #00b1a7;
       display: block;
       height: 5px;
       margin-top: 20px; }
   .career_section .timeline_act {
     position: absolute;
-    /*     background: #00b1a7; */
     background: #fff;
     text-align: left;
     padding: 1.4em;
@@ -542,7 +541,7 @@ main {
   .career_section p {
     color: black; }
   .career_section .timeline_act h3 {
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 1px; }
   .career_section .timeline_act .date {
     font-size: 24px;
@@ -571,7 +570,7 @@ main {
     margin-top: 15%; }
 
 .sticky {
-  background: #000 !important; }
+  background: #fff !important; }
 
 .detail-info {
   text-align: center; }
@@ -589,7 +588,7 @@ main {
   right: 0;
   transform: translate(-50%, 50%); }
 
-/* Portfolio / Works */
+/* Works */
 #wrapper-header {
   position: relative;
   display: flex;
@@ -628,7 +627,7 @@ main {
   bottom: 8vh;
   text-align: center;
   right: 0;
-  z-index: 10; }
+  z-index: 5; }
 
 .header-down-arrow img {
   animation: no-transform 1s 1s ease-out forwards;
@@ -647,7 +646,7 @@ main {
     transform: none; } }
 
 .parallax2 {
-  background-image: url("../img/workhard.jpg");
+  background-image: url("../img/brand1.jpg");
   background-attachment: fixed;
   height: 400px;
   background-position: 100% 100%;
@@ -660,11 +659,11 @@ main {
   text-align: center; }
 
 #work .sm-heading {
-  font-size: 20px;
+  font-size: 12px;
   letter-spacing: 15px; }
 
 #work-text {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 700;
   margin-left: -20px;
   letter-spacing: -2px; }
@@ -757,7 +756,8 @@ main {
     box-shadow: 2px 5px 1px 15px #000; }
   .section-gh h2 {
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    font-size: 13px; }
   .section-gh .github-account {
     width: 100%;
     margin-top: 50px;
@@ -783,7 +783,7 @@ main {
       transition: all 0.5s ease-out;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .asp .req .req-header {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: burlywood;
       font-family: "Gochi Hand", cursive; }
       .asp .req .req-header .nbr {
@@ -791,7 +791,7 @@ main {
         font-family: serif;
         padding: 2px; }
     .asp .req .req-motive {
-      font-size: 18px;
+      font-size: 12px;
       width: 100%;
       height: auto;
       font-weight: 400; }
@@ -815,14 +815,16 @@ main {
     right: 0;
     top: 0;
     bottom: 0;
-    height: 100%; }
+    height: 100%;
+    opacity: 1; }
   .con-introduction .con-introduction-bg {
     background: #fafefe;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    opacity: 1; }
 
 .contact-section {
   position: relative;
@@ -831,7 +833,8 @@ main {
   background: url("../img/bb.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  opacity: 0.5; }
 
 #contact-intro {
   margin: 0;
@@ -841,13 +844,13 @@ main {
   top: 30%;
   color: dimgrey; }
   #contact-intro .lg-heading {
-    font-size: 14vw;
-    letter-spacing: 15px;
+    font-size: 8vw;
+    letter-spacing: 10px;
     margin: 0; }
     #contact-intro .lg-heading #contact-text {
       font-size: 6rem;
       font-weight: 700;
-      margin-left: -20px;
+      margin-left: -40px;
       letter-spacing: -2px; }
   #contact-intro .sm-heading {
     font-size: 20px;
@@ -872,7 +875,7 @@ main {
     list-style: none;
     display: inline; }
   .boxes li {
-    font-size: 25px;
+    font-size: 14px;
     text-align: center;
     border-left: 3px solid #fff;
     background: rgba(9, 1, 1, 0.4);
@@ -972,13 +975,13 @@ main {
       margin-top: 2rem;
       box-shadow: 1px 5px 0px 5px #000; }
       #contact .contact-form form .submit:hover {
-        background: #000;
-        color: #00b1a7;
+        background: #00b1a7;
+        color: #000;
         cursor: pointer;
         letter-spacing: 2px;
         transition: all 0.3s; }
 
-/* Button */
+/* Button on Contact page */
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.2rem 1rem;
@@ -1007,34 +1010,32 @@ main {
   color: #fff;
   height: 100%;
   margin-top: 1.3rem; }
-  #main-footer:hover {
-    color: dimgrey;
-    transition: all 0.5s ease-out;
-    cursor: pointer;
-    transition-delay: all 0, 5s; }
   #main-footer .footer-profile {
     display: flex;
     justify-content: space-around;
     align-content: baseline; }
     #main-footer .footer-profile ul li {
       display: inline;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 10px; }
+      #main-footer .footer-profile ul li:hover {
+        color: #00b1a7;
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+        transition-delay: all 0, 5s; }
   #main-footer #small-text {
     text-align: center;
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-family: "Teko", sans-serif; }
 
-@media screen and (min-width: 1171px) {
-  main .introduction .introduction-inner .image .image-inner img {
-    width: 600px; }
-  .social-media {
-    top: 40%; }
+@media screen and (min-width: 1400px) {
   /* abouut */
   .bio #about-txt {
-    font-size: 9rem; }
+    font-size: 6rem; }
   #my-background {
-    font-size: 20px; }
+    font-size: 15px; }
   .about-info .job ul {
-    font-size: 1.1rem; }
+    font-size: 0.8rem; }
   .about-info .job .dev-sub {
     font-size: 0.9rem; }
   .about-info .job .overlay .library img {
@@ -1053,14 +1054,14 @@ main {
   .career_section .timeline_act {
     height: 280px; }
   .career_section .timeline_act h3 {
-    font-size: 24px; }
+    font-size: 18px; }
   .career_section .timeline_act .date {
     font-size: 28px; }
   .career_section .timeline_act h4 {
     font-size: 16px; }
   /* works */
   #work-text {
-    font-size: 9rem; }
+    font-size: 5rem; }
   .projects {
     grid-template-columns: repeat(3, 1fr); }
     .projects .project-details p:hover {
@@ -1069,14 +1070,12 @@ main {
       font-family: "Gochi Hand", cursive; }
   /* contact */
   #contact-intro .lg-heading #contact-text {
-    font-size: 9rem; } }
+    font-size: 7rem; } }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
+@media screen and (max-width: 1170px) and (min-width: 769px) {
   /* home */
   .social-media .icons {
     margin-top: 1.6rem; }
-  .introduction .introduction-inner .image .image-inner img {
-    width: 450px; }
   /* about */
   .about-info {
     grid-gap: 1.4rem;
@@ -1121,29 +1120,27 @@ main {
       font-size: 2vw; }
     main .icons .icon {
       margin-right: 15px; }
-    main .introduction .introduction-inner .content {
-      width: 50%; }
-      main .introduction .introduction-inner .content .content-inner {
-        width: 100%;
-        text-align: left;
-        margin: 10px 25px; }
-        main .introduction .introduction-inner .content .content-inner h1 {
-          font-size: 3.2rem;
-          line-height: 1.2;
-          width: 300px;
-          margin-bottom: 30px; }
-          main .introduction .introduction-inner .content .content-inner h1 .line {
-            height: 120px; }
-        main .introduction .introduction-inner .content .content-inner p {
-          font-size: 1rem;
-          width: 300px;
-          margin: 10px 0 28px; }
-      main .introduction .introduction-inner .content .image {
-        width: 50%; }
-        main .introduction .introduction-inner .content .image .image-inner img {
-          width: 450px; }
+    main .introduction .introduction-inner .content .content-inner {
+      width: 100%;
+      text-align: left;
+      margin: 10px 25px; }
+      main .introduction .introduction-inner .content .content-inner h1 {
+        font-size: 3.2rem;
+        line-height: 1.2;
+        width: 300px;
+        margin-bottom: 30px; }
+        main .introduction .introduction-inner .content .content-inner h1 .line {
+          height: 120px; }
+      main .introduction .introduction-inner .content .content-inner p {
+        font-size: 1rem;
+        width: 300px;
+        margin: 10px 0 28px; }
+    main .introduction .introduction-inner .image {
+      width: 100%; }
+      main .introduction .introduction-inner .image .image-inner img {
+        bottom: 30%; }
     main .social-media {
-      top: 66%; }
+      top: 76%; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -1165,8 +1162,6 @@ main {
       width: 15rem;
       height: 15rem; }
   /*about */
-  .bio #about-txt {
-    font-size: 4rem; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -1256,12 +1251,17 @@ main {
   #contact .contact-form {
     width: 600px; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) and (min-width: 421px) {
+  header {
+    position: absolute; }
   /* homepage */
+  .navbar-wrapper .mysign {
+    margin: 10px 0 0 20px; }
   .navbar-wrapper img {
-    width: 180px; }
+    width: 40px;
+    height: 50px; }
   .nav-item .nav-link {
-    font-size: 2.3rem; }
+    font-size: 2rem; }
   #home {
     height: 100%; }
   main .icons .icon {
@@ -1270,38 +1270,63 @@ main {
     height: 40px;
     line-height: 40px;
     margin-right: 15px; }
-  main .introduction .introduction-inner .content .content-inner {
-    width: 100%;
-    height: 100%;
-    margin: 5px 20px; }
+  main .introduction .introduction-inner {
+    grid-template-columns: 50% 50%;
+    height: 100vh; }
   main .introduction .introduction-inner .content {
-    width: 50%;
+    width: 100%;
     text-align: left;
     margin-top: 100px; }
+  main .introduction .introduction-inner .content .content-inner {
+    width: 100%;
+    height: 95%;
+    margin: 5px 10px; }
   main .introduction .introduction-inner .content .content-inner h1 {
-    font-size: 4.3rem;
-    padding: 10px 20px;
-    line-height: 4.8rem;
-    width: 200px; }
+    margin: 100px 0 0 0;
+    width: 100%;
+    font-size: 100px; }
     main .introduction .introduction-inner .content .content-inner h1 .line {
-      height: 150px; }
+      height: 140px; }
+      main .introduction .introduction-inner .content .content-inner h1 .line #p-name {
+        font-size: 35px;
+        font-weight: 200;
+        line-height: 1.2; }
+  main .introduction .introduction-inner .content .content-inner h1 .line-2 {
+    letter-spacing: 1px;
+    height: 190px; }
   main .introduction .introduction-inner .content .content-inner p {
-    font-size: 0.7rem;
-    width: 200px;
-    margin: 43px 20px; }
+    display: none; }
+  main .introduction .introduction-inner .content .content-inner .home_button #redirect {
+    font-size: 1rem;
+    padding: 15px 30px; }
+  main .introduction .introduction-inner .image {
+    width: 100%; }
   main .introduction .introduction-inner .image .image-inner img {
-    width: 400px;
-    bottom: 50px; }
+    width: 100%;
+    bottom: 50%; }
   main .social-media {
-    width: 350px;
-    top: 80%; }
+    width: 100%;
+    height: 80px;
+    top: 84%;
+    left: -40%; }
+  main .icons .icon {
+    margin-right: 5px;
+    font-size: 40px;
+    line-height: 60px;
+    height: 60px;
+    width: 60px; }
   /* about page */
+  #about-body header {
+    position: absolute; }
   #about {
-    padding: 1rem; }
+    padding: 10px; }
   #about h1 {
     font-size: 5rem; }
     #about h1 span {
       font-size: 3rem; }
+  .about-info {
+    padding: 1rem;
+    grid-gap: 1rem; }
   .about-info .bio-image {
     width: 100%;
     height: auto; }
@@ -1314,15 +1339,18 @@ main {
   .about-info .job {
     margin-bottom: 0.2rem; }
     .about-info .job .dev-main {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       padding-bottom: 0.4rem; }
     .about-info .job ul {
-      font-size: 1.2rem; }
+      font-size: 1rem; }
     .about-info .job .dev-sub {
       font-size: 0.7rem;
       padding: 0.3rem; }
   .about-info .job .overlay .library img {
-    left: 8rem; }
+    left: 10rem; }
+  .about-info .job .overlay .backend img {
+    width: 17vw;
+    display: grid; }
   .parallax {
     background-position: 50% 50%;
     background-size: cover; }
@@ -1337,14 +1365,14 @@ main {
   .career_section {
     padding: 5px 10px; }
   .career_section blockquote {
-    font-size: 1.6em;
-    width: 71%; }
+    font-size: 1.2em;
+    width: 80%; }
   .career_section .timeline_act h3 {
-    font-size: 17px; }
-  .career_section .timeline_act .date {
     font-size: 15px; }
+  .career_section .timeline_act .date {
+    font-size: 12px; }
   .career_section .timeline_act h4 {
-    font-size: 11px; }
+    font-size: 10px; }
   .career_section .timeline_act {
     height: 250px; }
   .career_section .timeline_act:nth-of-type(1) {
@@ -1403,15 +1431,16 @@ main {
     height: 200px; }
   /* contact page */
   #contact-intro {
-    left: 20%;
+    left: 10%;
     top: 40%; }
     #contact-intro .lg-heading {
-      font-size: 5rem;
+      font-size: 4rem;
       letter-spacing: 5px; }
       #contact-intro .lg-heading #contact-text {
-        font-size: 3rem; }
+        font-size: 3rem;
+        margin-left: -26px; }
     #contact-intro .sm-heading {
-      font-size: 9px;
+      font-size: 15px;
       letter-spacing: 5px; }
   #contact {
     grid-template-columns: 1fr;
@@ -1433,5 +1462,192 @@ main {
     font-weight: 100;
     letter-spacing: 2px; }
   /* footer */
-  .footer-profile ul li {
-    font-size: 0.6rem; } }
+  #main-footer .footer-profile ul li {
+    font-size: 8px;
+    font-weight: 200; } }
+
+/* very small devices */
+@media screen and (max-width: 420px) and (min-width: 320px) {
+  /* homepage */
+  .navbar-wrapper .mysign {
+    margin: 10px 0 0 5px; }
+  .navbar-wrapper img {
+    width: 40px;
+    height: 50px; }
+  .nav-item .nav-link {
+    font-size: 1.9rem; }
+  main .introduction .introduction-inner {
+    grid-template-columns: 50% 50%;
+    height: 100vh; }
+  main .introduction .introduction-inner .content {
+    width: 100%;
+    text-align: left;
+    margin-top: 100px; }
+  main .introduction .introduction-inner .content .content-inner {
+    width: 100%;
+    height: 100%;
+    margin: 4px 5px; }
+  main .introduction .introduction-inner .content .content-inner h1 {
+    font-size: 90px;
+    padding: 10px 5px;
+    width: 100%;
+    margin: 50px 0 0 0; }
+  main .introduction .introduction-inner .content .content-inner p {
+    display: none; }
+  main .introduction .introduction-inner .content .content-inner h1 .line {
+    height: 120px; }
+    main .introduction .introduction-inner .content .content-inner h1 .line #p-name {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 1.4; }
+  main .introduction .introduction-inner .content .content-inner h1 .line-2 {
+    letter-spacing: 1px;
+    height: 140px; }
+  main .introduction .introduction-inner .content .content-inner .home_button {
+    margin-top: 5px; }
+  main .introduction .introduction-inner .content .content-inner .home_button #redirect {
+    font-size: 0.8rem;
+    padding: 10px 15px; }
+  main .introduction .introduction-inner .image {
+    width: 100%; }
+  main .introduction .introduction-inner .image .image-inner img {
+    width: 100%;
+    bottom: 50%; }
+  main .social-media {
+    width: 100%;
+    height: 60px;
+    top: 84%;
+    left: -50%; }
+  main .icons .icon {
+    margin-right: 5px;
+    font-size: 30px;
+    line-height: 50px;
+    height: 51px;
+    width: 50px; }
+  /* work */
+  #about {
+    padding: 5px; }
+  #about h1 {
+    font-size: 3rem; }
+    #about h1 span {
+      font-size: 2rem;
+      margin-left: -12px; }
+  .about-info .bio-image {
+    width: 300px;
+    height: 300px; }
+  .bio #my-background {
+    font-size: 12px;
+    text-align: left; }
+  .about-info {
+    padding: 1rem 0.5rem;
+    grid-gap: 1rem; }
+  .about-info .job {
+    width: 90%;
+    margin-bottom: 1rem; }
+  .about-info .job ul {
+    font-size: 0.7rem; }
+  .about-info .job .overlay .core-img img {
+    width: 100%;
+    display: block; }
+  .about-info .job .overlay .library img {
+    width: 8%;
+    margin: 5px;
+    left: 9rem; }
+  .about-info .job .backend img {
+    width: 15vw;
+    display: block; }
+  .career_section {
+    padding: 5px 2px; }
+  .career_section blockquote {
+    font-size: 0.8em; }
+  .career_section .timeline_act {
+    height: 250px; }
+  .career_section .timeline_act h3 {
+    font-size: 13px; }
+  .career_section .timeline_act:nth-of-type(1) {
+    width: 48%;
+    top: 30%;
+    left: 52%;
+    margin-top: unset; }
+  .career_section .timeline_act:nth-of-type(2) {
+    width: 48%;
+    right: 52%;
+    top: 21%;
+    margin-top: 15%; }
+  .career_section .timeline_act:nth-of-type(3) {
+    width: 48%;
+    right: 0;
+    top: 63%; }
+  .career_section .timeline_act:nth-of-type(4) {
+    width: 48%;
+    top: 72%;
+    right: 52%; }
+  .career_section .timeline_act .date {
+    font-size: 14px; }
+  .career_section .timeline_act h4 {
+    font-size: 8px; }
+  /* work */
+  #work .lg-heading {
+    font-size: 3rem; }
+    #work .lg-heading span {
+      font-size: 3rem;
+      margin-left: -23px; }
+  #work .sm-heading {
+    font-size: 7px;
+    letter-spacing: 5px; }
+  .parallax2 {
+    background-position: 50% 50%;
+    height: 120px; }
+  .projects {
+    grid-template-columns: 1fr;
+    padding: 0.6rem; }
+  .section-gh {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 85vw;
+    height: 35vh; }
+  #gh-hint {
+    font-size: 0.9rem; }
+  #work .asp {
+    padding: 1rem 0.2rem; }
+  #work .asp .req {
+    width: 80%; }
+  #work .asp .req .req-header {
+    font-size: 0.8rem; }
+  #work .asp .req .req-motive {
+    font-size: 9px;
+    text-align: left;
+    padding: 5px 10px; }
+  /* contact */
+  #contact-intro {
+    left: 5%;
+    top: 40%;
+    width: 300px; }
+  #contact-intro .lg-heading {
+    font-size: 3rem;
+    letter-spacing: 5px; }
+  #contact-intro .sm-heading {
+    font-size: 10px;
+    letter-spacing: 5px; }
+  #contact-intro .lg-heading #contact-text {
+    font-size: 3rem;
+    margin-left: -20px; }
+  #contact {
+    padding: 5px; }
+  .boxes {
+    margin: 1rem auto;
+    width: 80vw; }
+  .boxes li {
+    font-size: 0.6rem; }
+  #resume a {
+    font-size: 0.6rem;
+    padding: 10px 20px; }
+  #contact .contact-form {
+    width: 300px; }
+  #contact .contact-form form {
+    padding: 1rem 1.5rem; }
+  #contact .contact-form .form-control {
+    font-size: 12px; }
+  #main-footer .footer-profile ul li {
+    font-size: 6px;
+    display: inline-block; } }

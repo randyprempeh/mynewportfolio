@@ -1,5 +1,36 @@
-/* about animation */
+/* Introductory animation */
+const bioImage = document.querySelector(".section-img");
+const aboutText = document.querySelector("#about-txt");
+const myBackground = document.querySelector("#my-background");
+/* const bigText2 = document.querySelectorAll(".sm-heading"); */
 
+
+const introaboutTL = gsap.timeline();
+
+introaboutTL 
+  .from(bioImage, {
+    delay: -0.8,
+    x: 55,
+    opacity: 0,
+    duration: 1.8,
+    ease: "power3.inOut",
+  })
+  .from([aboutText, myBackground], {
+    delay: -0.4,
+    y: -40,
+    duration: 0.8,
+    opacity: 0,
+    ease: "power3.inOut",
+    stagger: {
+      amount: 0.2,
+    },
+  })
+
+
+
+
+
+/* about animation */
 const tl = new TimelineMax({ onUpate: updatePercentage });
 const tl2 = new TimelineMax();
 

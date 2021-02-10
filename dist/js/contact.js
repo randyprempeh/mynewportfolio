@@ -1,9 +1,6 @@
-    /* Gsap Animation */
+     /* Gsap Animation */
+     
     const conHeader = document.querySelector("#contact-header");
- /*    const conIntroduction = document.querySelector("#con-introductionBg");
-    const conIntroductionAddition = document.querySelector(
-      "#con-introductionBgAddition"
-    ); */
     const bigText = document.querySelector("h1");
     const addText = document.querySelector("#contact-text");
     const bigText1 = document.querySelector("#contact-heading");
@@ -12,7 +9,7 @@
 
     const contactTL = gsap.timeline();
 
-    contactTL 
+    contactTL
       .from(conHeader, {
         delay: -0.8,
         x: 55,
@@ -49,4 +46,4 @@
         stagger: {
           amount: 0.2,
         },
-      });
+      }); 
